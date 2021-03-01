@@ -4,16 +4,7 @@ pragma solidity >=0.4.0 <0.9.0;
 
 contract FirstContract {
     // have a state variable - count
-    uint256 count;
-
-    constructor() {
-        count = 1;
-    }
-
-    // a getter function for that variable
-    function getCount() public view returns (uint256) {
-        return count;
-    }
+    uint256 public count = 1;
 
     // add a number to that variable
     function addNumber(uint256 _number) public {
