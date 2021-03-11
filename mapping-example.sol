@@ -7,7 +7,7 @@ contract MappingExample {
     mapping(string => uint256) public players;
 
     // nested mapping
-    mapping(string => mapping(string =>uint)) public versions
+    mapping(string => mapping(string => uint256)) public versions;
 
     // fill up the mapping with data
     constructor() {
@@ -33,7 +33,11 @@ contract MappingExample {
         delete players[_player];
     }
 
-    function getNestedData(string memory _version, string memory _player) external view returns (uint) {
+    function getNestedData(string memory _version, string memory _player)
+        external
+        view
+        returns (uint256)
+    {
         return versions[_version][_player];
     }
 }
